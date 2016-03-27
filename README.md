@@ -24,7 +24,10 @@ sdat2img.py <transfer_list> <system_new_file> <system_ext4>
 This is a simple example on a Linux system: 
 ```
 ~$ ./sdat2img.py system.transfer.list system.new.dat system.img
+~$ mkdir output
+~$ sudo mount -t ext4 -o loop system.img output/
 ```
+
 
 
 
