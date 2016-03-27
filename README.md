@@ -1,35 +1,40 @@
 # sdat2img
-Convert sparse Android data image (.dat) to filesystem ext4 image (.img)
+Converte uma imagem de dados android (.dat) para imagem com sistema de arquivo ext4 (.img)
 
 
 
-## Requirements
-This binary requires Python 3.x installed on your system.
+## Requisitos
+É necessário ter o Python 3.x instalado em seu sistema.
 
-It currently supports Windows x86/x64, Linux x86/x64 & arm/arm64 architectures.
+Atualmente suporta Debian (e seus variantes x86/x64), Windows x86/x64 & arquiteturas arm/arm64
 
 
 
-## Usage
+## Uso
 ```
 sdat2img.py <transfer_list> <system_new_file> <system_ext4>
 ```
-- `transfer_list` = input, system.transfer.list from rom zip
-- `system_new_file` = input, system.new.dat from rom zip
-- `system_ext4` = output ext4 raw image file
+- `transfer_list` = entrada, system.transfer.list do zip da rom decompactado
+- `system_new_file` = entrada, system.new.dat do zip da rom descompactado
+- `system_ext4` = saída ext4 do arquivo de imagem
 
 
 
-## Example
-This is a simple example on a Linux system: 
+## Exemplo
+Este é um exemplo simples em seu sistema Debian (e variantes);
 ```
 ~$ ./sdat2img.py system.transfer.list system.new.dat system.img
-~$ mkdir output
-~$ sudo mount -t ext4 -o loop system.img output/
+~$ mkdir imagem
+~$ sudo mount -t ext4 -o loop system.img imagem/
 ```
 
 
 
 
-## Info
-For more information about this binary, visit http://forum.xda-developers.com/android/software-hacking/how-to-conver-lollipop-dat-files-to-t2978952.
+## Infomação
+Para mais informações sobre este binário, visite http://forum.xda-developers.com/android/software-hacking/how-to-conver-lollipop-dat-files-to-t2978952.
+
+
+## Tradução
+Traduzido por Wellton Costa de Olivira
+www.wellton.com.br
